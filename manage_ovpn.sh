@@ -1,7 +1,8 @@
 #!/bin/bash
 
 OVPN_DATA="ovpn-data-volume"
-DOCKER_IMAGE="antpas14/openvpn"
+ARCH=$(uname -m)
+DOCKER_IMAGE="antpas14/openvpn:"$ARCH
 
 main() {
         action=$1
